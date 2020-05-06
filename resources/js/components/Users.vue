@@ -50,7 +50,6 @@
             <!-- /.card -->
           </div>
         </div>
-        <form action="">
         <!-- Modal -->
         <div class="modal fade" id="addNew" tabindex="-1" role="dialog" aria-labelledby="addNewLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
@@ -61,6 +60,8 @@
                 <span aria-hidden="true">&times;</span>
                 </button>
             </div>
+
+        <form @submit="createUser">
             <div class="modal-body">
 
                  <div class="form-group">
@@ -99,17 +100,13 @@
                         class="form-control" :class="{ 'is-invalid': form.errors.has('password') }">
                         <has-error :form="form" field="password"></has-error>
                     </div>
-
-
-
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                 <button type="button" class="btn btn-primary">Create</button>
             </div>
-
-            </form>
-            
+        </form>
+        
             </div>
         </div>
         </div>
