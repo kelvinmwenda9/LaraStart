@@ -61,7 +61,7 @@
                 </button>
             </div>
 
-        <form @submit="createUser">
+        <form @submit.prevent="createUser">
             <div class="modal-body">
 
                  <div class="form-group">
@@ -106,7 +106,7 @@
                 <button type="button" class="btn btn-primary">Create</button>
             </div>
         </form>
-        
+
             </div>
         </div>
         </div>
@@ -127,6 +127,12 @@
                     photo: ''
                 })
             }
+        },
+        methods: {
+            createUser(){
+                this.form.post('api/user');
+            }
+
         },
         mounted() {
             console.log('Component mounted.')
