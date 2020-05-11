@@ -33,7 +33,7 @@
                         <td>{{ user.type | upText }}</td>
                         <td>{{ user.created_at | myDate }}</td>
                         <td>
-                            <a href="">
+                            <a href="#" @click="editModal(user)">
                                 <i class="fa fa-edit blue"></i>
                             </a>
 
@@ -133,9 +133,17 @@
             }
         },
         methods: {
-            newModal(){
-
+            editModal(user){
+                this.form.reset();
+                $('#addNew').modal('show');
+                this.form.fill(user);
             },
+
+             newModal(){
+                this.form.reset();
+                $('#addNew').modal('show')
+            },
+            
             deleteUser(id){
                Swal.fire({
                 title: 'Are you sure?',
