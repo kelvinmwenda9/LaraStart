@@ -2001,7 +2001,7 @@ __webpack_require__.r(__webpack_exports__);
       var limit = 1024 * 1024 * 2;
 
       if (file['size'] > limit) {
-        swal({
+        Swal.fire({
           type: 'error',
           title: 'Oops...',
           text: 'You are uploading a large file'
