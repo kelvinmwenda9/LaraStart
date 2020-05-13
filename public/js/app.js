@@ -2010,6 +2010,7 @@ __webpack_require__.r(__webpack_exports__);
       }
 
       reader.onloadend = function (file) {
+        //console.log('RESULT',reader.result);
         _this2.form.photo = reader.result;
       };
 

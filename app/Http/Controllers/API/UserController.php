@@ -52,16 +52,7 @@ class UserController extends Controller
         ]);
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
+
 
      /**
      * Display the specified resource.
@@ -75,6 +66,32 @@ class UserController extends Controller
         return auth('api')->user();
     }
 
+
+     /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function updateProfile(Request $request)
+    {
+        //
+        $user =  auth('api')->user();
+        return $request->photo;
+        //return ['message' => 'success'];
+    }
+
+        /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        //
+    }  
+    
     /**
      * Update the specified resource in storage.
      *

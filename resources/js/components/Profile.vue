@@ -193,6 +193,7 @@
                     return false;
                 }
                 reader.onloadend = (file) => {
+                    //console.log('RESULT',reader.result);
                     this.form.photo = reader.result;
                 }
                 reader.readAsDataURL(file);
