@@ -14,7 +14,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <link rel="stylesheet" href="/css/app.css">
-  
+
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper" id="app">
@@ -26,7 +26,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <li class="nav-item">
         <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
       </li>
-    
+
     </ul>
 
     <!-- SEARCH FORM -->
@@ -75,7 +75,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <router-link to="/dashboard" class="nav-link">
                   <i class="nav-icon fas fa-tachometer-alt blue"></i>
                     <p>
-                        Dashboard
+                        {{ Dashboard }}
                     </p>
                 </router-link>
             </li>
@@ -138,7 +138,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     @csrf
                 </form>
             </li>
-         
+
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
@@ -163,7 +163,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   </div>
   <!-- /.content-wrapper -->
 
- 
+
 
   <!-- Main Footer -->
   <footer class="main-footer">
